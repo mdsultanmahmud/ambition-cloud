@@ -1,7 +1,12 @@
+@import url("https://fonts.maateen.me/solaiman-lipi/font.css");
 *,
 ::after,
 ::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: "SolaimanLipi", Arial, sans-serif !important;
 }

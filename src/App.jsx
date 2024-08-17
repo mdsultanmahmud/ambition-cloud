@@ -1,12 +1,36 @@
-import './App.css'
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "./App.css";
+import Loyout from "./layouts/Layout";
+import HomePage from "./pages/Home/Home";
+import Contact from "./pages/Contact/Contact";
+import About from "./pages/About/About";
 
 function App() {
-
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Loyout />,
+      children: [
+        {
+          path: "/",
+          element: <HomePage />,
+        },
+        {
+          path: "/contact",
+          element: <Contact />,
+        },
+        {
+          path: "/about",
+          element: <About />,
+        },
+      ],
+    },
+  ]);
   return (
-    <>
-      <p>this is landing page of ambition cloud </p>
-    </>
-  )
+    <div>
+      <RouterProvider router={router} />
+    </div>
+  );
 }
 
-export default App
+export default App;
