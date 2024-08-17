@@ -1,0 +1,42 @@
+.single__order__card__container{
+    border-radius: 10px;
+
+}
+.card__header{
+    background-color: #f20791;
+    padding: 1rem;
+    border-radius: 10px 10px 0 0 ;
+    text-align: center;
+}
+.card__body{
+    padding: 2rem 1rem;
+    border: 1px solid #f20791;
+    border-top: 0;
+    margin-top: -4px;
+    border-radius: 0 0 10px 10px;
+}
+.card__body p{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.card__body p:first-child{
+    font-size: 16px;
+    text-align: center;
+}
+.card__body hr{
+    margin-bottom: 15px;
+    
+}
+.card__body button{
+    padding: 5px 20px;
+  border-radius: 30px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  border: 1px solid #f20791; 
+  cursor: pointer;
+  font-weight: 600;
+  display: block;
+  margin: 0 auto;
+}

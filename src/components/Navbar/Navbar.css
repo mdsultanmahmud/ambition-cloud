@@ -1,7 +1,7 @@
 .ambition__cloud__navbar__container {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   height: 70px;
-  position: absolute;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
@@ -45,11 +45,12 @@
   align-items: center;
 }
 .ambition__cloud__navbar__button button {
-  padding: 5px 10px;
+  padding: 5px 20px;
   border: 1px solid #f20791;
-  border-radius: 10px;
+  border-radius: 30px;
   font-size: 18px;
   transition: all ease-in-out 0.3s;
+  background-color: #fff;
 }
 .ambition__cloud__navbar__button button:hover {
   background-color: #f20791;

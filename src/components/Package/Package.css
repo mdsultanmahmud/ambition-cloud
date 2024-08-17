@@ -1,0 +1,57 @@
+.ambition__cloud__single__package__container {
+ display: flex;
+ align-items: center;
+ gap: 5%;
+ /* justify-content: space-between; */
+}
+
+.ambition__cloud__single__package__container .ambition__cloud__packge__img__section{
+    width: 37%;
+}
+.ambition__cloud__single__package__container .ambition__cloud__package__content__section{
+    width: 58%;
+}
+
+.package__name{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.package__info {
+    padding: 0 15px;
+}
+.package__info h4{
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+.package__info .package__features, .package__info .package__technologies{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+   
+}
+.package__info .package__technologies div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.package__info .package__technologies div img{
+    width: 40px;
+}
+.package__info .package__technologies div p{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.package__info .order__card__container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin: 15px 0px;
+}
+
+.package__extra__features{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 5px;
+}

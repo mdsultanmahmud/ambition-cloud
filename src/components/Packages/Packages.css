@@ -1,0 +1,62 @@
+.ambition__cloud__package__container {
+  width: 85%;
+  margin: 0 auto;
+  position: relative;
+}
+.ambition__cloud__package__toggle__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  position: sticky;
+  top: 70px;
+  left: 0px;
+  background-color: #fff;
+  height: 90px;
+}
+.ambition__cloud__package__toggle__btn button {
+  padding: 5px 20px;
+  border-radius: 30px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  border: 1px solid rgb(199, 196, 196);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.ambition__cloud__package__toggle__btn button.active {
+  border: 1px solid #f20791;
+  background-color: #fff;
+  color: #f20791;
+}
+
+.ambition__cloud__package__name__section {
+  position: relative;
+  margin: 20px 0px;
+}
+.ambition__cloud__package__name__section h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+.ambition__cloud__package__name__section p {
+  font-size: 16px;
+}
+.ambition__cloud__package__name__section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10px;
+  height: 100%;
+  width: 5px;
+  background-color: #f20791;
+}
+
+
+.ambition__cloud__package{
+  margin-bottom: 100px !important;
+}
+.ambition__cloud__package hr{
+  margin-top: 50px !important;
+}
