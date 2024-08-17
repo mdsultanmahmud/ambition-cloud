@@ -18,6 +18,9 @@
 }
 
 @media screen and (max-width: 767px) {
+    .ambition__cloud__condition__container{
+        width: 95%;
+    }
     .ambition__cloud__condition__container h3{
         font-size: 16px;
     }
