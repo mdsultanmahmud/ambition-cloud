@@ -13,6 +13,7 @@
   left: 0px;
   background-color: #fff;
   height: 90px;
+  z-index: 5;
 }
 .ambition__cloud__package__toggle__btn button {
   padding: 5px 20px;
@@ -53,10 +54,25 @@
   background-color: #f20791;
 }
 
-
-.ambition__cloud__package{
+.ambition__cloud__package {
   margin-bottom: 100px !important;
 }
-.ambition__cloud__package hr{
+.ambition__cloud__package hr {
   margin-top: 50px !important;
+}
+
+@media screen and (max-width: 992px) {
+  .ambition__cloud__package__container {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .ambition__cloud__package__toggle__btn {
+    gap: 5px;
+  }
+  .ambition__cloud__package__toggle__btn button {
+    padding: 5px 10px;
+    border-radius: 30px;
+    font-size: 15px;
+  }
 }

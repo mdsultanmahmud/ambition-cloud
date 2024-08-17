@@ -3,9 +3,9 @@ import "./Packages.css";
 import packageOne from "../../assets/package--1.png";
 import packageTwo from "../../assets/package--2.png";
 import packageThree from "../../assets/package--3.png";
-import laravel from '../../assets/larav.png'
-import vue from '../../assets/vue.png'
-import react from '../../assets/react.png'
+import laravel from "../../assets/larav.png";
+import vue from "../../assets/vue.png";
+import react from "../../assets/react.png";
 const Packages = () => {
   const packages = [
     {
@@ -75,6 +75,17 @@ const Packages = () => {
         {
           Email: "admin@gmail.com",
           password: "123456",
+          name: "Admin",
+        },
+        {
+          Email: "admin@gmail.com",
+          password: "123456",
+          name: "User",
+        },
+        {
+          Email: "admin@gmail.com",
+          password: "123456",
+          name: "Vendor",
         },
       ],
     },
@@ -149,6 +160,17 @@ const Packages = () => {
         {
           Email: "admin@gmail.com",
           password: "123456",
+          name: "Admin",
+        },
+        {
+          Email: "admin@gmail.com",
+          password: "123456",
+          name: "User",
+        },
+        {
+          Email: "admin@gmail.com",
+          password: "123456",
+          name: "Vendor",
         },
       ],
     },
@@ -223,6 +245,17 @@ const Packages = () => {
         {
           Email: "admin@gmail.com",
           password: "123456",
+          name: "Admin",
+        },
+        {
+          Email: "admin@gmail.com",
+          password: "123456",
+          name: "User",
+        },
+        {
+          Email: "admin@gmail.com",
+          password: "123456",
+          name: "Vendor",
         },
       ],
     },

@@ -1,57 +1,155 @@
 .ambition__cloud__single__package__container {
- display: flex;
- align-items: center;
- gap: 5%;
- /* justify-content: space-between; */
+  display: flex;
+  align-items: center;
+  column-gap: 5%;
+
+  /* justify-content: space-between; */
 }
 
-.ambition__cloud__single__package__container .ambition__cloud__packge__img__section{
-    width: 37%;
+.ambition__cloud__single__package__container
+  .ambition__cloud__packge__img__section {
+  width: 37%;
 }
-.ambition__cloud__single__package__container .ambition__cloud__package__content__section{
-    width: 58%;
+.ambition__cloud__single__package__container
+  .ambition__cloud__package__content__section {
+  width: 58%;
 }
 
-.package__name{
-    font-size: 25px;
-    margin-bottom: 10px;
+.package__name {
+  font-size: 25px;
+  margin-bottom: 10px;
 }
 .package__info {
-    padding: 0 15px;
+  padding: 0 15px;
 }
-.package__info h4{
-    margin-top: 15px;
-    margin-bottom: 5px;
-    font-size: 20px;
+.package__info h4 {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-size: 20px;
 }
-.package__info .package__features, .package__info .package__technologies{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 5px;
-   
+.package__info .package__features,
+.package__info .package__technologies {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
 }
-.package__info .package__technologies div{
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.package__info .package__technologies div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-.package__info .package__technologies div img{
-    width: 40px;
+.package__info .package__technologies div img {
+  width: 40px;
 }
-.package__info .package__technologies div p{
-    font-size: 16px;
+.package__info .package__technologies div p {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.package__info .order__card__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin: 15px 0px;
+}
+
+.package__extra__features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 5px;
+}
+.package__perfect__section {
+  margin-top: 15px !important;
+}
+.package__perfect__section p {
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+.package__nb {
+  margin-top: 15px;
+}
+
+/* image section design  */
+.package__image {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+.demo__link__para {
+  text-align: center;
+  font-size: 18px;
+    font-weight: 600;
+  margin: 15px 0;
+}
+.cat__section,
+.admin__items {
+  padding: 0 1.5rem;
+  display: flex;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+.cat__item__btn {
+  width: 90px;
+  border: 1px solid #f20791;
+  padding: 3px 10px;
+  font-size: 15px;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: 600;
+}
+.cat__item {
+  font-size: 15px;
+}
+.cat__link {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+.cat__link:hover {
+  color: #f20791;
+}
+
+.demo__title{
+    margin-bottom: 10px;
+    font-size: 18px;
     font-weight: 600;
 }
-
-.package__info .order__card__container{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    margin: 15px 0px;
+@media screen and (max-width: 992px) {
+  .ambition__cloud__single__package__container {
+    flex-direction: column-reverse;
+    row-gap: 30px !important;
+  }
+  .ambition__cloud__single__package__container
+    .ambition__cloud__packge__img__section {
+    width: 100%;
+  }
+  .ambition__cloud__single__package__container
+    .ambition__cloud__package__content__section {
+    width: 100%;
+  }
+  .package__image {
+    width: 50%;
+  }
 }
+@media screen and (max-width: 767px) {
+  .package__name {
+    font-size: 20px;
+  }
+  .package__info h4 {
+    font-size: 18px;
+  }
+  .package__info .package__features,
+  .package__info .package__technologies {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3px;
+  }
 
-.package__extra__features{
+  .package__info .order__card__container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 5px;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 10px;
+  }
+  .package__image {
+    width: 80%;
+  }
 }

@@ -1,11 +1,11 @@
 import "./OrderCard.css";
-const OrderCard = () => {
+const OrderCard = ({color}) => {
   return (
     <div className="single__order__card__container">
-      <h4 className="card__header">
+      <h4 className="card__header" style={{backgroundColor: color}}>
         সাধারন <br /> মূলঃ ৫০, ০০০ টাকা
       </h4>
-      <div className="card__body">
+      <div className="card__body" style={{borderColor: color}}>
         <p>কাড যমন আেছ তমন</p>
         <p>
           সাইট ডিলভারীঃ <span>১৫ িদন</span>
@@ -14,7 +14,7 @@ const OrderCard = () => {
           ি সােপাটঃ <span>১৫ িদন</span>
         </p>
         <hr />
-      <button>অডার কন</button>
+      <button style={{borderColor: color}}>অডার কন</button>
       </div>
     </div>
   );
