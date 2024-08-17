@@ -1,0 +1,127 @@
+.ambition__cloud__navbar__container {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 70px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 10;
+}
+.ambition__cloud__navbar__lg {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+.ambition__cloud__navbar__logo a {
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.ambition__cloud__navbar__menu {
+  display: flex;
+}
+.ambition__cloud__navbar__menu li {
+  list-style: none;
+  font-size: 20px;
+  font-weight: 500;
+  color: #000;
+  cursor: pointer;
+  padding: 1rem;
+  position: relative;
+}
+.ambition__cloud__navbar__menu li a {
+  text-decoration: none;
+  color: #000;
+}
+.ambition__cloud__navbar__button {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.ambition__cloud__navbar__button button {
+  padding: 5px 10px;
+  border: 1px solid #f20791;
+  border-radius: 10px;
+  font-size: 18px;
+  transition: all ease-in-out 0.3s;
+}
+.ambition__cloud__navbar__button button:hover {
+  background-color: #f20791;
+  color: #fff;
+  cursor: pointer;
+}
+.ambition__cloud__navbar__toggle {
+  display: none;
+}
+.ambition__cloud__navbar__menu li .active {
+  color: #f20791 !important;
+}
+.ambition__cloud__navbar__menu li .active a {
+  color: #f20791 !important;
+}
+.ambition__cloud__navbar__menu li .active::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 7px;
+  background-color: #f20791;
+  width: 100%;
+}
+.ambition__cloud__navbar__sm {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .ambition__cloud__navbar__menu {
+    display: none;
+  }
+  .ambition__cloud__navbar__toggle {
+    display: block;
+    cursor: pointer;
+  }
+  .ambition__cloud__navbar__sm {
+    display: block;
+    background-color: #fff;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 0px;
+    overflow: hidden;
+    transition: height ease-in-out 0.1s;
+  }
+  .ambition__cloud__navbar__menu__sm{
+    padding: 1rem;
+  }
+  .ambition__cloud__navbar__sm.active{
+    height: 200px;
+    /* padding: 1rem; */
+  }
+  .ambition__cloud__navbar__sm li {
+    list-style: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+    cursor: pointer;
+    padding: 5px;
+    position: relative;
+  }
+  .ambition__cloud__navbar__sm li a {
+    text-decoration: none;
+    color: #000;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* .ambition__cloud__navbar__sm {
+    width: 100% !important;
+  } */
+}
