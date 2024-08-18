@@ -39,6 +39,24 @@
   text-decoration: none;
   color: #000;
 }
+
+
+.ambition__cloud__navbar__menu  .active {
+  color: #f20791 !important;
+}
+.ambition__cloud__navbar__menu  .active a {
+  color: #f20791 !important;
+}
+.ambition__cloud__navbar__menu .active::after {
+  content: "";
+  position: absolute;
+  top: 105%;
+  left: 0px;
+  height: 7px;
+  background-color: #f20791;
+  width: 100%;
+}
+
 .ambition__cloud__navbar__button {
   display: flex;
   gap: 10px;
@@ -61,21 +79,7 @@
 .ambition__cloud__navbar__toggle {
   display: none;
 }
-.ambition__cloud__navbar__menu li .active {
-  color: #f20791 !important;
-}
-.ambition__cloud__navbar__menu li .active a {
-  color: #f20791 !important;
-}
-.ambition__cloud__navbar__menu li .active::after {
-  content: "";
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  height: 7px;
-  background-color: #f20791;
-  width: 100%;
-}
+
 .ambition__cloud__navbar__sm {
   display: none;
 }
@@ -103,6 +107,13 @@
   .ambition__cloud__navbar__menu__sm{
     padding: 1rem;
   }
+  .ambition__cloud__navbar__menu__sm .active{
+    border-bottom: 3px solid #f20791;
+    color: #f20791 !important;
+  }
+  .ambition__cloud__navbar__menu__sm .active a{
+    color: #f20791 !important;
+  }
   .ambition__cloud__navbar__sm.active{
     height: 200px;
     /* padding: 1rem; */
@@ -115,6 +126,7 @@
     cursor: pointer;
     padding: 5px;
     position: relative;
+    margin-bottom: 1rem;
   }
   .ambition__cloud__navbar__sm li a {
     text-decoration: none;
