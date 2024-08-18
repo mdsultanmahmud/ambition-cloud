@@ -23,12 +23,12 @@ const Contact = () => {
   const handleForm = (e) => {
     e.preventDefault();
     toast.success("Your message submitted!");
-    console.log("form data is:",formData);
+    console.log("form data is:", formData);
   };
   return (
     <div className="ambition__cloud__contact__us__container">
       <div className="ambition__cloud__contact__us__content__container">
-        <h3 className="contact__us__title">Contact Us</h3>
+        <h3 className="contact__us__title">যোগাযোগ করুন</h3>
         <div className="ambition__cloud__contact__us__content">
           <div className="contact__us__info__container">
             <div className="contact__us__title__description__container">
@@ -37,18 +37,19 @@ const Contact = () => {
               </div> */}
               <div className="contact__us__desc__container">
                 <h4>
-                  Have you any query ? <br /> please drop a message
+                  আপনার কোনো প্রশ্ন আছে কি? <br /> অনুগ্রহ করে একটি মেসেজ পাঠান।
                 </h4>
                 <p>
-                  Get in touch and let me know how I can help. Fill out the form
-                  and I'll be in touch as soon as possible.
+                  আমাদের সাথে যোগাযোগ করুন এবং জানান কিভাবে আমরা সহায়তা করতে
+                  পারি। ফর্মটি পূরণ করুন, যত তাড়াতাড়ি সম্ভব আপনার সাথে যোগাযোগ
+                  করা হবে।
                 </p>
               </div>
             </div>
             <div className="contact__us__link__container">
               <h4 className="contact__us__link">
                 <FaLocationDot size={24} />
-                <span>Address:</span>{" "}
+                <span>ঠিকানা:</span>{" "}
               </h4>
               <p className="info__address">
                 New 7 Towers, Love Road, Tejgoan I/A, Dhaka - 1208, Bangladesh
@@ -56,15 +57,15 @@ const Contact = () => {
             </div>
             <div className="contact__us__link__container">
               <h4 className="contact__us__link">
-                <MdCall size={24} /> <span>Phone:</span>{" "}
+                <MdCall size={24} /> <span>মোবাইল নাম্বার:</span>{" "}
               </h4>
-              <p>+8801581192171</p>
-              <p>+8801581192171</p>
+              <p>০১৭২৩৩৭..</p>
+              <p>০১৭২৩৩৭..</p>
             </div>
             <div className="contact__us__link__container">
               <h4 className="contact__us__link">
                 <MdOutgoingMail size={24} />
-                <span>Email:</span>{" "}
+                <span>ইমেইল:</span>{" "}
               </h4>
               <p>info@example.com</p>
               <p>support@example.com</p>
@@ -79,7 +80,7 @@ const Contact = () => {
           <div className="contact__us__form__container">
             <form onSubmit={handleForm} className="contact__us__form">
               <div className="input__form">
-                <label htmlFor="name">Name</label>
+                <label htmlFor="name">নাম:</label>
                 <input
                   onChange={(e) => handleInput(e)}
                   type="text"
@@ -89,7 +90,7 @@ const Contact = () => {
                 />
               </div>
               <div className="input__form">
-                <label htmlFor="email">email</label>
+                <label htmlFor="email">ইমেইল:</label>
                 <input
                   onChange={(e) => handleInput(e)}
                   type="email"
@@ -99,16 +100,17 @@ const Contact = () => {
                 />
               </div>
               <div className="input__form">
-                <label htmlFor="phone">phone(Option)</label>
+                <label htmlFor="phone">মোবাইল নাম্বার:</label>
                 <input
                   onChange={(e) => handleInput(e)}
                   type="text"
                   id="phone"
                   name="phone"
+                  required
                 />
               </div>
               <div className="input__form">
-                <label htmlFor="message">message</label>
+                <label htmlFor="message">মেসেজ:</label>
                 <textarea
                   onChange={(e) => handleInput(e)}
                   type="text"
@@ -117,7 +119,7 @@ const Contact = () => {
                   required
                 />
               </div>
-              <button type="submit">send</button>
+              <button type="submit">পাঠান</button>
             </form>
           </div>
         </div>

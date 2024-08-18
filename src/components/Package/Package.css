@@ -51,6 +51,7 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
   margin: 15px 0px;
+  place-items: center;
 }
 
 .package__extra__features {
@@ -147,7 +148,6 @@
   .package__info .order__card__container {
     grid-template-columns: repeat(1, 1fr);
     row-gap: 20px;
-    place-items: center;
   }
   .package__image {
     width: 80%;

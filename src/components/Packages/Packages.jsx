@@ -7,6 +7,7 @@ import laravel from "../../assets/larav.png";
 import vue from "../../assets/vue.png";
 import react from "../../assets/react.png";
 import { useState } from "react";
+import convertToBengaliNumber from "../../utils/convertToBengaliNumber ";
 // eslint-disable-next-line react/prop-types
 const Packages = ({ packageProps }) => {
   const [packageName, setPackageName] = useState("package__0");
@@ -294,7 +295,7 @@ const Packages = ({ packageProps }) => {
                 className="ambition__cloud__package"
               >
                 <div className="ambition__cloud__package__name__section">
-                  <h2>Package {index + 1}</h2>
+                  <h2>প্যাকেজ {convertToBengaliNumber(index + 1)}</h2>
                   <p>Version: 2.0.3</p>
                 </div>
                 <Package packageProps={packageProps} pkg={pkg} />
