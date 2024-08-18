@@ -8,13 +8,30 @@ import InterB from "../../assets/InterB.png";
 import { TbCurrencyTaka } from "react-icons/tb";
 import SubmitModal from "../SubmitModal/SubmitModal";
 import { useState } from "react";
+import toast from "react-hot-toast";
 
 const Payment = () => {
   const [open, setOpen] = useState(false);
-
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+    address: "",
+    isRobot: false,
+    isAgree: false,
+  });
+  const handleInput = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
   const handleOrder = (e) => {
     e.preventDefault();
+    toast.success("Your order confirmed!");
     setOpen(true);
+    console.log(formData);
   };
   const methods = [
     {
@@ -100,20 +117,36 @@ const Payment = () => {
           <form onSubmit={handleOrder} className="payment__form">
             <div className="input__form">
               <label htmlFor="name">নাম</label>
-              <input id="name" name="name" type="text" />
+              <input
+                onChange={(e) => handleInput(e)}
+                id="name"
+                name="name"
+                type="text"
+              />
             </div>
 
             <div className="input__form">
               <label htmlFor="email">ইেমইলঃ </label>
-              <input type="email" id="email" name="email" />
+              <input
+                onChange={(e) => handleInput(e)}
+                type="email"
+                id="email"
+                name="email"
+              />
             </div>
             <div className="input__form">
               <label htmlFor="phone">মাবাইল নাারঃ</label>
-              <input type="text" id="phone" name="phone" />
+              <input
+                onChange={(e) => handleInput(e)}
+                type="text"
+                id="phone"
+                name="phone"
+              />
             </div>
             <div className="input__form">
               <label htmlFor="address">িঠকানাঃ</label>
               <textarea
+                onChange={(e) => handleInput(e)}
                 className="address"
                 type="text"
                 id="address"
@@ -122,14 +155,29 @@ const Payment = () => {
             </div>
             <div className="input__form">
               <label htmlFor="message">মেসজঃ</label>
-              <textarea type="text" id="message" name="message" />
+              <textarea
+                onChange={(e) => handleInput(e)}
+                type="text"
+                id="message"
+                name="message"
+              />
             </div>
             <div className="input__form__checkbox">
-              <input type="checkbox" id="isRobot" name="isRobot" />
+              <input
+                onChange={(e) => handleInput(e)}
+                type="checkbox"
+                id="isRobot"
+                name="isRobot"
+              />
               <label htmlFor="isRobot">আিম রাবট নই ।</label>
             </div>
             <div className="input__form__checkbox">
-              <input type="checkbox" id="isAgree" name="isAgree" />
+              <input
+                onChange={(e) => handleInput(e)}
+                type="checkbox"
+                id="isAgree"
+                name="isAgree"
+              />
               <label htmlFor="isAgree">
                 আিম উপেরর শেত রািজ আিছ এবং িবািরত আেলাচনা সােপে ওডার করিছ ।
               </label>

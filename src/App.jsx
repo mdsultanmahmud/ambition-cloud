@@ -4,6 +4,7 @@ import Loyout from "./layouts/Layout";
 import HomePage from "./pages/Home/Home";
 import Contact from "./pages/Contact/Contact";
 import About from "./pages/About/About";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   const router = createBrowserRouter([
@@ -29,6 +30,7 @@ function App() {
   return (
     <div>
       <RouterProvider router={router} />
+      <Toaster />
     </div>
   );
 }
