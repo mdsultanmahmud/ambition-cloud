@@ -3,7 +3,7 @@ import "./Package.css";
 import { FaCheck } from "react-icons/fa6";
 
 // eslint-disable-next-line react/prop-types
-const Package = ({ pkg }) => {
+const Package = ({ pkg, packageProps }) => {
   // eslint-disable-next-line react/prop-types
   const {
     name,
@@ -14,6 +14,8 @@ const Package = ({ pkg }) => {
     websites,
     admin_panel_access_info,
     admin_panel_link,
+    common, 
+    customize
   } = pkg;
   return (
     <div className="ambition__cloud__single__package__container">
@@ -83,11 +85,11 @@ const Package = ({ pkg }) => {
             }
           </div>
           <div className="order__card__container">
-            <OrderCard color={"#636c8c"} />
-            <OrderCard color={"#f20791"} />
+            <OrderCard packageProps ={packageProps} props = {common} color={"#566573"} />
+            <OrderCard packageProps ={packageProps} props = {customize} color={"#f20791"} />
           </div>
-          <div>
-            <p>সােথ আেরা যা থাকেছ......</p>
+          <div style={{margin:"25px 0"}}>
+            <p style={{fontWeight:"600"}}>সােথ আেরা যা থাকেছ......</p>
             <div className="package__extra__features">
               {
                 // eslint-disable-next-line react/prop-types

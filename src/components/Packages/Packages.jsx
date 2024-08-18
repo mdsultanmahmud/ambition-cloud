@@ -7,7 +7,8 @@ import laravel from "../../assets/larav.png";
 import vue from "../../assets/vue.png";
 import react from "../../assets/react.png";
 import { useState } from "react";
-const Packages = () => {
+// eslint-disable-next-line react/prop-types
+const Packages = ({ packageProps }) => {
   const [packageName, setPackageName] = useState("package__0");
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -43,16 +44,22 @@ const Packages = () => {
         },
       ],
       common: {
-        price: "5000",
+        price: "৫,০০০",
         state1: "কাড যমন আেছ তমন",
         delivery: " ২৪ ঘটার মেধ",
         support: "৩ িদন",
+        type: "সাধারণ",
+        name:"package_1", 
+        type1:"general"
       },
       customize: {
-        price: "10000",
+        price: "১০,০০০",
         state1: "িনেজর পছমত কামাইজ করা যােব",
         delivery: " ৩ থেক ৫ িদন",
         support: "7  িদন",
+        type: "কাস্টমাইজ",
+         name:"package_1", 
+        type1:"customize"
       },
       extra_features: [
         "৫ িজিব শয়াড হািং ি ( ১২ মাস)",
@@ -128,16 +135,22 @@ const Packages = () => {
         },
       ],
       common: {
-        price: "5000",
+        price: "১৫,০০০",
         state1: "কাড যমন আেছ তমন",
         delivery: " ২৪ ঘটার মেধ",
         support: "৩ িদন",
+        type: "সাধারণ",
+         name:"package_2", 
+        type1:"general"
       },
       customize: {
-        price: "10000",
+        price: "৩০,০০০",
         state1: "িনেজর পছমত কামাইজ করা যােব",
         delivery: " ৩ থেক ৫ িদন",
         support: "7  িদন",
+        type: "কাস্টমাইজ",
+         name:"package_2", 
+        type1:"customize"
       },
       extra_features: [
         "৫ িজিব শয়াড হািং ি ( ১২ মাস)",
@@ -217,12 +230,18 @@ const Packages = () => {
         state1: "কাড যমন আেছ তমন",
         delivery: " ২৪ ঘটার মেধ",
         support: "৩ িদন",
+        type: "সাধারণ",
+         name:"package_3", 
+        type1:"general"
       },
       customize: {
         price: "10000",
         state1: "িনেজর পছমত কামাইজ করা যােব",
         delivery: " ৩ থেক ৫ িদন",
         support: "7  িদন",
+        type: "কাস্টমাইজ",
+         name:"package_3", 
+        type1:"customize"
       },
       extra_features: [
         "৫ িজিব শয়াড হািং ি ( ১২ মাস)",
@@ -314,7 +333,7 @@ const Packages = () => {
                   <h2>Package {index + 1}</h2>
                   <p>Version: 2.0.3</p>
                 </div>
-                <Package pkg={pkg} />
+                <Package packageProps = {packageProps} pkg={pkg} />
                 <hr />
               </div>
             ))}

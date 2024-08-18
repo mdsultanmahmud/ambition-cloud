@@ -7,11 +7,16 @@ import ISB from "../../assets/ISB.png";
 import InterB from "../../assets/InterB.png";
 import { TbCurrencyTaka } from "react-icons/tb";
 import SubmitModal from "../SubmitModal/SubmitModal";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 
-const Payment = () => {
+const Payment = ({ props }) => {
   const [open, setOpen] = useState(false);
+  const [price, setPrice] = useState("৩০,০০০");
+  const [isAgree, setIsAgree] = useState(false);
+  const { selectedPackage, setSelectedPackage, packageType, setPackageType } =
+    props;
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -59,6 +64,27 @@ const Payment = () => {
       name: "ইন্টার্ন ব্যাংক",
     },
   ];
+  useEffect(() => {
+    if (selectedPackage === "package_1") {
+      if (packageType === "general") {
+        setPrice("৫,০০০");
+      } else {
+        setPrice("১০,০০০");
+      }
+    } else if (selectedPackage === "package_2") {
+      if (packageType === "general") {
+        setPrice("১৫,০০০");
+      } else {
+        setPrice("৩০,০০০");
+      }
+    } else {
+      if (packageType === "general") {
+        setPrice("৫০,০০০");
+      } else {
+        setPrice("১,২০,০০০");
+      }
+    }
+  }, [selectedPackage, packageType]);
   return (
     <>
       <div id="order__section" className="ambition__cloud__payment__container">
@@ -91,25 +117,40 @@ const Payment = () => {
             <p>য পােকজিট িনেত ইুক</p>
             <p>
               <TbCurrencyTaka size={22} />
-              <span>৩০,০০০ টাকা</span>
+              <span>{price} টাকা</span>
             </p>
           </div>
           <div className="selected__package">
-            <div>
+            <div
+              onClick={() => setSelectedPackage("package_1")}
+              className={`${selectedPackage === "package_1" && "active"}`}
+            >
               <p>পােকজ ১</p>
             </div>
-            <div className="active">
+            <div
+              onClick={() => setSelectedPackage("package_2")}
+              className={`${selectedPackage === "package_2" && "active"}`}
+            >
               <p>পােকজ ২</p>
             </div>
-            <div>
+            <div
+              onClick={() => setSelectedPackage("package_3")}
+              className={`${selectedPackage === "package_3" && "active"}`}
+            >
               <p>পােকজ ৩</p>
             </div>
           </div>
           <div className="selected__package__items">
-            <div className="active">
+            <div
+              onClick={() => setPackageType("general")}
+              className={`${packageType === "general" && "active"}`}
+            >
               <p>সাধারণ</p>
             </div>
-            <div>
+            <div
+              onClick={() => setPackageType("customize")}
+              className={`${packageType === "customize" && "active"}`}
+            >
               <p>কামাইজ</p>
             </div>
           </div>
@@ -121,6 +162,7 @@ const Payment = () => {
                 onChange={(e) => handleInput(e)}
                 id="name"
                 name="name"
+                required
                 type="text"
               />
             </div>
@@ -129,6 +171,7 @@ const Payment = () => {
               <label htmlFor="email">ইেমইলঃ </label>
               <input
                 onChange={(e) => handleInput(e)}
+                required
                 type="email"
                 id="email"
                 name="email"
@@ -138,6 +181,7 @@ const Payment = () => {
               <label htmlFor="phone">মাবাইল নাারঃ</label>
               <input
                 onChange={(e) => handleInput(e)}
+                required
                 type="text"
                 id="phone"
                 name="phone"
@@ -148,6 +192,7 @@ const Payment = () => {
               <textarea
                 onChange={(e) => handleInput(e)}
                 className="address"
+                required
                 type="text"
                 id="address"
                 name="address"
@@ -157,6 +202,7 @@ const Payment = () => {
               <label htmlFor="message">মেসজঃ</label>
               <textarea
                 onChange={(e) => handleInput(e)}
+                required
                 type="text"
                 id="message"
                 name="message"
@@ -177,13 +223,16 @@ const Payment = () => {
                 type="checkbox"
                 id="isAgree"
                 name="isAgree"
+                onClick={() => setIsAgree(!isAgree)}
               />
               <label htmlFor="isAgree">
                 আিম উপেরর শেত রািজ আিছ এবং িবািরত আেলাচনা সােপে ওডার করিছ ।
               </label>
             </div>
 
-            <button type="submit">অডার কন</button>
+            <button type="submit" disabled={!isAgree}>
+              অডার কন
+            </button>
           </form>
         </div>
       </div>
