@@ -14,15 +14,15 @@ const OrderCard = ({ color, props, packageProps }) => {
   return (
     <div className="single__order__card__container">
       <h4 className="card__header" style={{ backgroundColor: color }}>
-        {type} <br /> মূলঃ {price} টাকা
+        {type} <br /> মূল্যঃ {price} টাকা
       </h4>
       <div className="card__body" style={{ borderColor: color }}>
         <p>{state1}</p>
         <p>
-          সাইট ডিলভারীঃ <span>{delivery}</span>
+          সাইট ডেলিভারীঃ <span>{delivery}</span>
         </p>
         <p>
-          ি সােপাটঃ <span>{support}</span>
+          ফ্রি সাপোর্টঃ <span>{support}</span>
         </p>
         <hr />
         <button
@@ -33,7 +33,7 @@ const OrderCard = ({ color, props, packageProps }) => {
           }}
           style={{ borderColor: color }}
         >
-          অডার কন
+          অর্ডার করুন
         </button>
       </div>
     </div>

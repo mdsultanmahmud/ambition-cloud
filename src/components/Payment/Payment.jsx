@@ -10,10 +10,12 @@ import SubmitModal from "../SubmitModal/SubmitModal";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 
+// eslint-disable-next-line react/prop-types
 const Payment = ({ props }) => {
   const [open, setOpen] = useState(false);
   const [price, setPrice] = useState("৩০,০০০");
   const [isAgree, setIsAgree] = useState(false);
+  // eslint-disable-next-line react/prop-types
   const { selectedPackage, setSelectedPackage, packageType, setPackageType } =
     props;
 
@@ -61,7 +63,7 @@ const Payment = ({ props }) => {
     },
     {
       icon: InterB,
-      name: "ইন্টার্ন ব্যাংক",
+      name: "ইস্টার্ণ ব্যাংক",
     },
   ];
   useEffect(() => {
@@ -89,12 +91,12 @@ const Payment = ({ props }) => {
     <>
       <div id="order__section" className="ambition__cloud__payment__container">
         <div className="payment__method__container">
-          <h4 className="payment__method__title">পেমট এর িনয়মঃ</h4>
+          <h4 className="payment__method__title">পেমেন্ট এর নিয়মঃ</h4>
           <p className="payment__method__desc">
-            অডার কনফাম এর সময় ৫০%, সাইট ডিলভারীর সময় বািক ৫০% ।
+          অর্ডার কনফার্ম এর সময় ৫০%, সাইট ডেলিভারীর সময় বাকি ৫০% ।
           </p>
           <div className="payment__method">
-            <p className="payment__method__title">পেমট মথডঃ</p>
+            <p className="payment__method__title">পেমেন্ট মেথডঃ</p>
             <div className="payment__method__item">
               {methods?.map((m, i) => (
                 <div key={i}>
@@ -107,14 +109,13 @@ const Payment = ({ props }) => {
         </div>
         <hr />
         <div className="payment__method__form__container">
-          <p className="payment__method__form__title">অডার কন</p>
+          <p className="payment__method__form__title">অর্ডার করুন</p>
           <p className="payment__method__form__desc">
-            SAAS - Software As A Service িহসােব একিট মা ওেয়বসাইেট ববহার করেত
-            পারেবন । তেব সাস কাড সহ িকনেত চাইেল িনধািরত মুেলর ৫ গূণ অথ পিরেশাধ
-            করেত হেব ।
+          SAAS - Software As A Service হিসাবে একটি মাত্র ওয়েবসাইটে ব্যবহার করতে পারবেন ।
+          তবে সোর্স কোড সহ কিনতে চাইলে নির্ধারিত মুল্যের ৫ গূণ অর্থ পরিশোধ করতে হবে ।
           </p>
           <div className="form__choose__section">
-            <p>য পােকজিট িনেত ইুক</p>
+            <p>যে প্যাকেজটি নিতে ইচ্ছুক</p>
             <p>
               <TbCurrencyTaka size={22} />
               <span>{price} টাকা</span>
@@ -125,19 +126,19 @@ const Payment = ({ props }) => {
               onClick={() => setSelectedPackage("package_1")}
               className={`${selectedPackage === "package_1" && "active"}`}
             >
-              <p>পােকজ ১</p>
+              <p>প্যাকেজ ১</p>
             </div>
             <div
               onClick={() => setSelectedPackage("package_2")}
               className={`${selectedPackage === "package_2" && "active"}`}
             >
-              <p>পােকজ ২</p>
+              <p>প্যাকেজ ২</p>
             </div>
             <div
               onClick={() => setSelectedPackage("package_3")}
               className={`${selectedPackage === "package_3" && "active"}`}
             >
-              <p>পােকজ ৩</p>
+              <p>প্যাকেজ ৩</p>
             </div>
           </div>
           <div className="selected__package__items">
@@ -151,13 +152,13 @@ const Payment = ({ props }) => {
               onClick={() => setPackageType("customize")}
               className={`${packageType === "customize" && "active"}`}
             >
-              <p>কামাইজ</p>
+              <p>কাষ্টমাইজ</p>
             </div>
           </div>
 
           <form onSubmit={handleOrder} className="payment__form">
             <div className="input__form">
-              <label htmlFor="name">নাম</label>
+              <label htmlFor="name">নামঃ</label>
               <input
                 onChange={(e) => handleInput(e)}
                 id="name"
@@ -168,7 +169,7 @@ const Payment = ({ props }) => {
             </div>
 
             <div className="input__form">
-              <label htmlFor="email">ইেমইলঃ </label>
+              <label htmlFor="email">ইমেইলঃ  </label>
               <input
                 onChange={(e) => handleInput(e)}
                 required
@@ -178,7 +179,7 @@ const Payment = ({ props }) => {
               />
             </div>
             <div className="input__form">
-              <label htmlFor="phone">মাবাইল নাারঃ</label>
+              <label htmlFor="phone">মোবাইল নাম্বারঃ</label>
               <input
                 onChange={(e) => handleInput(e)}
                 required
@@ -188,7 +189,7 @@ const Payment = ({ props }) => {
               />
             </div>
             <div className="input__form">
-              <label htmlFor="address">িঠকানাঃ</label>
+              <label htmlFor="address">ঠিকানাঃ</label>
               <textarea
                 onChange={(e) => handleInput(e)}
                 className="address"
@@ -199,7 +200,7 @@ const Payment = ({ props }) => {
               />
             </div>
             <div className="input__form">
-              <label htmlFor="message">মেসজঃ</label>
+              <label htmlFor="message">মেসেজঃ </label>
               <textarea
                 onChange={(e) => handleInput(e)}
                 required
@@ -215,7 +216,7 @@ const Payment = ({ props }) => {
                 id="isRobot"
                 name="isRobot"
               />
-              <label htmlFor="isRobot">আিম রাবট নই ।</label>
+              <label htmlFor="isRobot">আমি রোবট নই ।</label>
             </div>
             <div className="input__form__checkbox">
               <input
@@ -226,12 +227,12 @@ const Payment = ({ props }) => {
                 onClick={() => setIsAgree(!isAgree)}
               />
               <label htmlFor="isAgree">
-                আিম উপেরর শেত রািজ আিছ এবং িবািরত আেলাচনা সােপে ওডার করিছ ।
+              আমি উপরের শর্তে রাজি আছি এবং বিস্তারিত আলোচনা সাপেক্ষে ওর্ডার করছি ।
               </label>
             </div>
 
             <button type="submit" disabled={!isAgree}>
-              অডার কন
+            অর্ডার করুন
             </button>
           </form>
         </div>

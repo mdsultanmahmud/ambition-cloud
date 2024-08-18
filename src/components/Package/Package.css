@@ -78,8 +78,8 @@
 .demo__link__para {
   text-align: center;
   font-size: 18px;
-    font-weight: 600;
-  margin: 15px 0;
+  font-weight: 600;
+  margin-top: 50px !important;
 }
 .cat__section,
 .admin__items {
@@ -109,10 +109,10 @@
   color: #f20791;
 }
 
-.demo__title{
-    margin-bottom: 10px;
-    font-size: 18px;
-    font-weight: 600;
+.demo__title {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
 }
 @media screen and (max-width: 992px) {
   .ambition__cloud__single__package__container {

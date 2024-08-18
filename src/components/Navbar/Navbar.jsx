@@ -1,65 +1,82 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import { FaBars } from "react-icons/fa";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ImCross } from "react-icons/im";
 
 const Navbar = () => {
   const location = useLocation();
-  const [section, setSection] = useState();
+  const navigate = useNavigate();
+  const [section, setSection] = useState(null);
   const [showNav, setShowNav] = useState(false);
+
+  useEffect(() => {
+    if (location.pathname === "/" && location.state?.scrollTo) {
+      scrollToSection(location.state.scrollTo);
+      setSection(location.state.scrollTo);
+    }
+  }, [location]);
+
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  const handleSectionClick = (sectionId) => {
+    if (location.pathname === "/") {
+      scrollToSection(sectionId);
+      setSection(sectionId);
+    } else {
+      navigate("/", { state: { scrollTo: sectionId } });
+    }
+  };
+
   const menu = (
     <>
+      <li className={`${location.pathname === "/" && !section && "active"}`}>
+        <Link to="/">হোম</Link>
+      </li>
       <li
-        onClick={() => {
-          scrollToSection("package__section");
-          setSection("package__section");
-        }}
+        onClick={() => handleSectionClick("package__section")}
         className={`${
           section === "package__section" &&
           location.pathname === "/" &&
           "active"
         }`}
       >
-        পােকজ
+        প্যাকেজ
       </li>
       <li
-        onClick={() => {
-          scrollToSection("condition_section");
-          setSection("condition_section");
-        }}
+        onClick={() => handleSectionClick("condition_section")}
         className={`${
           section === "condition_section" &&
           location.pathname === "/" &&
           "active"
         }`}
       >
-        শতবলী
+        শর্তাবলী
       </li>
       <li className={`${location.pathname === "/about" && "active"}`}>
-        <Link to={"/about"}>আমােদর সেক</Link>
+        <Link to="/about">আমাদের সম্পর্কে</Link>
       </li>
       <li className={`${location.pathname === "/contact" && "active"}`}>
-        <Link to={"/contact"}>যাগােযাগ</Link>
+        <Link to="/contact">যোগাযোগ</Link>
       </li>
     </>
   );
+
   return (
     <div className="ambition__cloud__navbar__container">
       <div className="ambition__cloud__navbar__lg">
         <div className="ambition__cloud__navbar__logo">
-          <Link to={"/"}>Ambition Cloud</Link>
+          <Link to="/">Ambition Cloud</Link>
         </div>
         <ul className="ambition__cloud__navbar__menu">{menu}</ul>
         <div className="ambition__cloud__navbar__button">
-          <button onClick={() => scrollToSection("order__section")}>
-            অডার কন
+          <button onClick={() => handleSectionClick("order__section")}>
+            অর্ডার করুন
           </button>
           <div className="ambition__cloud__navbar__toggle">
             {!showNav ? (

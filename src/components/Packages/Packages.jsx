@@ -18,24 +18,12 @@ const Packages = ({ packageProps }) => {
   };
   const packages = [
     {
-      name: "পার ফা ই-কমাস ওেয়বসাইট (Single Vendor)",
+      name: "সুপার ফাস্ট ই-কমার্স ওয়েবসাইট(Single Vendor)",
       features: [
-        "াডা িলিং",
-        "াডা িলিং",
-        "অডার মােনজেমট",
-        "ইনভেয়স তরী",
-        "াডা িলিং",
-        "াডা িলিং",
-        "অডার মােনজেমট",
-        "ইনভেয়স তরী",
-        "াডা িলিং",
-        "াডা িলিং",
-        "অডার মােনজেমট",
-        "ইনভেয়স তরী",
-        "াডা িলিং",
-        "াডা িলিং",
-        "অডার মােনজেমট",
-        "ইনভেয়স তরী",
+        "প্রোডাক্ট লিষ্টিং",
+        "অর্ডার ম্যানেজমেন্ট",
+        "ইনভয়েস তৈরী",
+        "আরো অনেক কিছু...",
       ],
       technology: [
         {
@@ -45,26 +33,26 @@ const Packages = ({ packageProps }) => {
       ],
       common: {
         price: "৫,০০০",
-        state1: "কাড যমন আেছ তমন",
-        delivery: " ২৪ ঘটার মেধ",
-        support: "৩ িদন",
+        state1: "কোড যেমন আছে তেমন ।",
+        delivery: "২৪ ঘন্টার মধ্যে",
+        support: "৩ দিন",
         type: "সাধারণ",
-        name:"package_1", 
-        type1:"general"
+        name: "package_1",
+        type1: "general",
       },
       customize: {
         price: "১০,০০০",
-        state1: "িনেজর পছমত কামাইজ করা যােব",
-        delivery: " ৩ থেক ৫ িদন",
-        support: "7  িদন",
+        state1: "নিজের পছন্দমত কাস্টমাইজ করা যাবে",
+        delivery: "৩ থেকে ৫ দিন",
+        support: "৭ দিন",
         type: "কাস্টমাইজ",
-         name:"package_1", 
-        type1:"customize"
+        name: "package_1",
+        type1: "customize",
       },
       extra_features: [
-        "৫ িজিব শয়াড হািং ি ( ১২ মাস)",
-        "১ িট ডােমইন ি",
-        "সাভাের ি সট আপ",
+        "৫ জিবি শেয়ার্ড হোষ্টিং ফ্রি ( ১২ মাস)",
+        "১ টি ডোমেইন ফ্রি",
+        "সার্ভারে ফ্রি সেট আপ ",
       ],
       img: packageOne,
       websites: [
@@ -105,24 +93,12 @@ const Packages = ({ packageProps }) => {
       ],
     },
     {
-      name: "পার ফা ই-কমাস ওেয়বসাইট (Multi Vendor)",
+      name: "সুপার ফাস্ট ই-কমার্স ওয়েবসাইট(Multi Vendor)",
       features: [
-        "াডা িলিং",
-        "াডা িলিং",
-        "অডার মােনজেমট",
-        "ইনভেয়স তরী",
-        "াডা িলিং",
-        "াডা িলিং",
-        "অডার মােনজেমট",
-        "ইনভেয়স তরী",
-        "াডা িলিং",
-        "াডা িলিং",
-        "অডার মােনজেমট",
-        "ইনভেয়স তরী",
-        "াডা িলিং",
-        "াডা িলিং",
-        "অডার মােনজেমট",
-        "ইনভেয়স তরী",
+        "প্রোডাক্ট লিষ্টিং",
+        "অর্ডার ম্যানেজমেন্ট",
+        "ইনভয়েস তৈরী",
+        "আরো অনেক কিছু...",
       ],
       technology: [
         {
@@ -136,26 +112,26 @@ const Packages = ({ packageProps }) => {
       ],
       common: {
         price: "১৫,০০০",
-        state1: "কাড যমন আেছ তমন",
-        delivery: " ২৪ ঘটার মেধ",
-        support: "৩ িদন",
+        state1: "কোড যেমন আছে তেমন ।",
+        delivery: "৩ দিনের মধ্যে",
+        support: "৭ দিন",
         type: "সাধারণ",
-         name:"package_2", 
-        type1:"general"
+        name: "package_2",
+        type1: "general",
       },
       customize: {
         price: "৩০,০০০",
-        state1: "িনেজর পছমত কামাইজ করা যােব",
-        delivery: " ৩ থেক ৫ িদন",
-        support: "7  িদন",
+        state1: "নিজের পছন্দমত কাস্টমাইজ করা যাবে",
+        delivery: "৭ থেকে ১৫ দিন",
+        support: "১৫ দিন",
         type: "কাস্টমাইজ",
-         name:"package_2", 
-        type1:"customize"
+        name: "package_2",
+        type1: "customize",
       },
       extra_features: [
-        "৫ িজিব শয়াড হািং ি ( ১২ মাস)",
-        "১ িট ডােমইন ি",
-        "সাভাের ি সট আপ",
+        "৫ জিবি শেয়ার্ড হোষ্টিং ফ্রি ( ১২ মাস)",
+        "১ টি ডোমেইন ফ্রি",
+        "সার্ভারে ফ্রি সেট আপ ",
       ],
       img: packageTwo,
       websites: [
@@ -196,24 +172,12 @@ const Packages = ({ packageProps }) => {
       ],
     },
     {
-      name: "পার ফা ই-কমাস ওেয়বসাইট",
+      name: "সুপার ফাস্ট ই-কমার্স ওয়েবসাইট",
       features: [
-        "াডা িলিং",
-        "াডা িলিং",
-        "অডার মােনজেমট",
-        "ইনভেয়স তরী",
-        "াডা িলিং",
-        "াডা িলিং",
-        "অডার মােনজেমট",
-        "ইনভেয়স তরী",
-        "াডা িলিং",
-        "াডা িলিং",
-        "অডার মােনজেমট",
-        "ইনভেয়স তরী",
-        "াডা িলিং",
-        "াডা িলিং",
-        "অডার মােনজেমট",
-        "ইনভেয়স তরী",
+        "প্রোডাক্ট লিষ্টিং",
+        "অর্ডার ম্যানেজমেন্ট",
+        "ইনভয়েস তৈরী",
+        "আরো অনেক কিছু...",
       ],
       technology: [
         {
@@ -226,27 +190,27 @@ const Packages = ({ packageProps }) => {
         },
       ],
       common: {
-        price: "5000",
-        state1: "কাড যমন আেছ তমন",
-        delivery: " ২৪ ঘটার মেধ",
-        support: "৩ িদন",
+        price: "৫০,০০০",
+        state1: "কোড যেমন আছে তেমন ।",
+        delivery: "১৫ দিন",
+        support: "১৫  দিন",
         type: "সাধারণ",
-         name:"package_3", 
-        type1:"general"
+        name: "package_3",
+        type1: "general",
       },
       customize: {
-        price: "10000",
-        state1: "িনেজর পছমত কামাইজ করা যােব",
-        delivery: " ৩ থেক ৫ িদন",
-        support: "7  িদন",
+        price: "১,২০,০০০",
+        state1: "নিজের পছন্দমত কাস্টমাইজ করা যাবে",
+        delivery: "১ মাস",
+        support: "১ মাস",
         type: "কাস্টমাইজ",
-         name:"package_3", 
-        type1:"customize"
+        name: "package_3",
+        type1: "customize",
       },
       extra_features: [
-        "৫ িজিব শয়াড হািং ি ( ১২ মাস)",
-        "১ িট ডােমইন ি",
-        "সাভাের ি সট আপ",
+        "৪ জিবি র‌্যাম, 2৫ জিবি ভিপিএস হোষ্টিং ফ্রি ( ১২ মাস)",
+        "১ টি ডোমেইন ফ্রি",
+        "সার্ভারে ফ্রি সেট আপ ",
       ],
       img: packageThree,
       websites: [
@@ -299,7 +263,7 @@ const Packages = ({ packageProps }) => {
             }}
             className={`${packageName === "package__0" && "active"}`}
           >
-            পােকজ ১
+            প্যাকেজ ১
           </button>
           <button
             onClick={() => {
@@ -308,7 +272,7 @@ const Packages = ({ packageProps }) => {
             }}
             className={`${packageName === "package__1" && "active"}`}
           >
-            পােকজ ২
+            প্যাকেজ ২
           </button>
           <button
             onClick={() => {
@@ -317,7 +281,7 @@ const Packages = ({ packageProps }) => {
             }}
             className={`${packageName === "package__2" && "active"}`}
           >
-            পােকজ ৩
+            প্যাকেজ ৩
           </button>
         </div>
         <div>
@@ -333,7 +297,7 @@ const Packages = ({ packageProps }) => {
                   <h2>Package {index + 1}</h2>
                   <p>Version: 2.0.3</p>
                 </div>
-                <Package packageProps = {packageProps} pkg={pkg} />
+                <Package packageProps={packageProps} pkg={pkg} />
                 <hr />
               </div>
             ))}
