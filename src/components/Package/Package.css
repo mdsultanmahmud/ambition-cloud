@@ -18,6 +18,7 @@
 .package__name {
   font-size: 25px;
   margin-bottom: 10px;
+  opacity: 0.8;
 }
 .package__info {
   padding: 0 15px;
@@ -26,6 +27,7 @@
   margin-top: 15px;
   margin-bottom: 5px;
   font-size: 20px;
+  opacity: 0.8;
 }
 .package__info .package__features,
 .package__info .package__technologies {
@@ -134,10 +136,10 @@
 }
 @media screen and (max-width: 767px) {
   .package__name {
-    font-size: 20px;
+    font-size: 18px;
   }
   .package__info h4 {
-    font-size: 18px;
+    font-size: 16px;
   }
   .package__info .package__features,
   .package__info .package__technologies {

@@ -60,7 +60,8 @@
   justify-content: space-between;
   align-items: center;
 }
-.form__choose__section p {
+.form__choose__section p,
+.form__choose__section span {
   font-size: 16px;
 }
 
@@ -114,7 +115,8 @@
   row-gap: 5px;
   margin-bottom: 15px;
 }
-.input__form label {
+.input__form label,
+.input__form__checkbox label {
   font-size: 18px;
 }
 .input__form input {
@@ -159,7 +161,7 @@
   border: 1px solid #f20791;
   color: #f20791;
 }
-.payment__form button:disabled{
+.payment__form button:disabled {
   cursor: default;
   opacity: 0.5;
 }
@@ -185,7 +187,17 @@
   .payment__method__form__container {
     width: 90% !important;
   }
+  .selected__package div {
+    padding: 0.4rem !important;
+  }
+  .selected__package__items div {
+    padding: 0.5rem !important;
+  }
   .payment__method__item {
     flex-wrap: wrap;
+  }
+  .input__form label,
+  .input__form__checkbox label {
+    font-size: 16px;
   }
 }

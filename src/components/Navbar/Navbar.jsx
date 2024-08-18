@@ -3,7 +3,7 @@ import "./Navbar.css";
 import { FaBars } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import { ImCross } from "react-icons/im";
-
+import logo from '../../assets/logo.png'
 const Navbar = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -25,6 +25,7 @@ const Navbar = () => {
   };
 
   const handleSectionClick = (sectionId) => {
+    setShowNav(false)
     if (location.pathname === "/") {
       scrollToSection(sectionId);
       setSection(sectionId);
@@ -35,9 +36,9 @@ const Navbar = () => {
 
   const menu = (
     <>
-      <li className={`${location.pathname === "/" && !section && "active"}`}>
+      {/* <li className={`${location.pathname === "/" && !section && "active"}`}>
         <Link to="/">হোম</Link>
-      </li>
+      </li> */}
       <li
         onClick={() => handleSectionClick("package__section")}
         className={`${
@@ -58,10 +59,10 @@ const Navbar = () => {
       >
         শর্তাবলী
       </li>
-      <li className={`${location.pathname === "/about" && "active"}`}>
+      <li onClick={() => setShowNav(false)} className={`${location.pathname === "/about" && "active"}`}>
         <Link to="/about">আমাদের সম্পর্কে</Link>
       </li>
-      <li className={`${location.pathname === "/contact" && "active"}`}>
+      <li onClick={() => setShowNav(false)} className={`${location.pathname === "/contact" && "active"}`}>
         <Link to="/contact">যোগাযোগ</Link>
       </li>
     </>
@@ -71,7 +72,9 @@ const Navbar = () => {
     <div className="ambition__cloud__navbar__container">
       <div className="ambition__cloud__navbar__lg">
         <div className="ambition__cloud__navbar__logo">
-          <Link to="/">Ambition Cloud</Link>
+          <Link to="/">
+            <img src={logo} alt="" />
+          </Link>
         </div>
         <ul className="ambition__cloud__navbar__menu">{menu}</ul>
         <div className="ambition__cloud__navbar__button">
@@ -80,9 +83,9 @@ const Navbar = () => {
           </button>
           <div className="ambition__cloud__navbar__toggle">
             {!showNav ? (
-              <FaBars onClick={() => setShowNav(true)} />
+              <FaBars size={22} onClick={() => setShowNav(true)} />
             ) : (
-              <ImCross onClick={() => setShowNav(false)} />
+              <ImCross size={22} onClick={() => setShowNav(false)} />
             )}
           </div>
         </div>

@@ -115,7 +115,7 @@ const Payment = ({ props }) => {
           তবে সোর্স কোড সহ কিনতে চাইলে নির্ধারিত মুল্যের ৫ গূণ অর্থ পরিশোধ করতে হবে ।
           </p>
           <div className="form__choose__section">
-            <p>যে প্যাকেজটি নিতে ইচ্ছুক</p>
+            <span>যে প্যাকেজটি নিতে ইচ্ছুক</span>
             <p>
               <TbCurrencyTaka size={22} />
               <span>{price} টাকা</span>

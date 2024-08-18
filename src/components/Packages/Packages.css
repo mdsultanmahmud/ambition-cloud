@@ -40,6 +40,7 @@
 .ambition__cloud__package__name__section h2 {
   font-size: 20px;
   font-weight: 600;
+  opacity: 0.8;
 }
 .ambition__cloud__package__name__section p {
   font-size: 16px;
@@ -69,6 +70,9 @@
 @media screen and (max-width: 767px) {
   .ambition__cloud__package__toggle__btn {
     gap: 5px;
+  }
+  .ambition__cloud__package__name__section h2 {
+    font-size: 18px;
   }
   .ambition__cloud__package__toggle__btn button {
     padding: 5px 10px;

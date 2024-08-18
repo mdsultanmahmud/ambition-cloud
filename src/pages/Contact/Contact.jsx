@@ -5,7 +5,7 @@ import { FaFacebook } from "react-icons/fa6";
 import { FaTelegramPlane } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 import toast from "react-hot-toast";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -25,6 +25,11 @@ const Contact = () => {
     toast.success("Your message submitted!");
     console.log("form data is:", formData);
   };
+
+  useEffect(() =>{
+    window.scrollTo(0,0)
+  },[])
+
   return (
     <div className="ambition__cloud__contact__us__container">
       <div className="ambition__cloud__contact__us__content__container">
@@ -52,7 +57,8 @@ const Contact = () => {
                 <span>ঠিকানা:</span>{" "}
               </h4>
               <p className="info__address">
-                New 7 Towers, Love Road, Tejgoan I/A, Dhaka - 1208, Bangladesh
+                নিউ ৭ টাওয়ার, লাভ রোড, তেজগাঁও শিল্প এলাকা, ঢাকা - ১২০৮,
+                বাংলাদেশ
               </p>
             </div>
             <div className="contact__us__link__container">
