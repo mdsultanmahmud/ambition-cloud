@@ -6,7 +6,15 @@ import packageThree from "../../assets/package--3.png";
 import laravel from "../../assets/larav.png";
 import vue from "../../assets/vue.png";
 import react from "../../assets/react.png";
+import { useState } from "react";
 const Packages = () => {
+  const [packageName, setPackageName] = useState("package__0");
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   const packages = [
     {
       name: "পার ফা ই-কমাস ওেয়বসাইট (Single Vendor)",
@@ -261,19 +269,47 @@ const Packages = () => {
     },
   ];
   return (
-    <div className="ambition__cloud__package__container">
+    <div id="package__section" className="ambition__cloud__package__container">
       <div className="ambition__cloud__package__content">
         {/* package toggle button  */}
         <div className="ambition__cloud__package__toggle__btn">
-          <button className="active">পােকজ ১</button>
-          <button>পােকজ ২</button>
-          <button>পােকজ ৩</button>
+          <button
+            onClick={() => {
+              scrollToSection("package__0");
+              setPackageName("package__0");
+            }}
+            className={`${packageName === "package__0" && "active"}`}
+          >
+            পােকজ ১
+          </button>
+          <button
+            onClick={() => {
+              scrollToSection("package__1");
+              setPackageName("package__1");
+            }}
+            className={`${packageName === "package__1" && "active"}`}
+          >
+            পােকজ ২
+          </button>
+          <button
+            onClick={() => {
+              scrollToSection("package__2");
+              setPackageName("package__2");
+            }}
+            className={`${packageName === "package__2" && "active"}`}
+          >
+            পােকজ ৩
+          </button>
         </div>
         <div>
           {/* all packages here  */}
           <div className="ambition__cloud__packages">
             {packages.map((pkg, index) => (
-              <div key={index} className="ambition__cloud__package">
+              <div
+                id={`package__${index}`}
+                key={index}
+                className="ambition__cloud__package"
+              >
                 <div className="ambition__cloud__package__name__section">
                   <h2>Package {index + 1}</h2>
                   <p>Version: 2.0.3</p>

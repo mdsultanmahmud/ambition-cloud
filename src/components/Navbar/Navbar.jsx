@@ -6,10 +6,16 @@ import { ImCross } from "react-icons/im";
 
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   const menu = (
     <>
-      <li className="active">পােকজ</li>
-      <li className="">শতবলী</li>
+      <li onClick={() => scrollToSection('package__section')} className="active">পােকজ</li>
+      <li onClick={() => scrollToSection('condition_section')} className="">শতবলী</li>
       <li>
         <Link to={"/about"}>আমােদর সেক</Link>
       </li>
@@ -26,7 +32,7 @@ const Navbar = () => {
         </div>
         <ul className="ambition__cloud__navbar__menu">{menu}</ul>
         <div className="ambition__cloud__navbar__button">
-          <button>অডার কন</button>
+          <button onClick={() => scrollToSection('order__section')}>অডার কন</button>
           <div className="ambition__cloud__navbar__toggle">
             {!showNav ? (
               <FaBars onClick={() => setShowNav(true)} />

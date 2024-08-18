@@ -1,7 +1,7 @@
 import "./Condition.css";
 const Condition = () => {
   return (
-    <div className="ambition__cloud__condition__container">
+    <div id="condition_section" className="ambition__cloud__condition__container">
       <p className="condition__heading">শতাবলীঃ</p>
       <h3>
         কউ যিদ সাস কাড সহ কােডর অনারিশপ সহ িনেত চায় তেব, য কান মুেলর ৩ থেক ৫ ন

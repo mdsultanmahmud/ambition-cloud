@@ -61,7 +61,7 @@ const Payment = () => {
   ];
   return (
     <>
-      <div className="ambition__cloud__payment__container">
+      <div id="order__section" className="ambition__cloud__payment__container">
         <div className="payment__method__container">
           <h4 className="payment__method__title">পেমট এর িনয়মঃ</h4>
           <p className="payment__method__desc">

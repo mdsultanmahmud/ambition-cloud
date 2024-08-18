@@ -51,6 +51,7 @@
   font-size: 18px;
   transition: all ease-in-out 0.3s;
   background-color: #fff;
+  text-align: center;
 }
 .ambition__cloud__navbar__button button:hover {
   background-color: #f20791;
