@@ -6,7 +6,7 @@ const Footer = () => {
       padding:"1rem 0",
       color:"#fff"
     }}>
-      <p style={{fontSize:"18px"}}>Ambition Cloud Quick Solution (Pre built Script)</p>
+      <p style={{fontSize:"16px"}}>Ambition Cloud Quick Solution (Pre built Script)</p>
     </div>
   );
 };
