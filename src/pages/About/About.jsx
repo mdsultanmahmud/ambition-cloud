@@ -10,7 +10,7 @@ const About = () => {
   }, []);
   return (
     <div className="ambition__cloud__about__us__container">
-      <h3 className="contact__us__title">আমাদের সম্পর্কে</h3>
+      <h3 className="about__us__title">আমাদের সম্পর্কে</h3>
       <div className="about__us__content__container">
         <div className="about__us__info__container">
           <div className="about__us__info__img__container">

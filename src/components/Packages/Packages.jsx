@@ -6,17 +6,17 @@ import packageThree from "../../assets/package--3.png";
 import laravel from "../../assets/larav.png";
 import vue from "../../assets/vue.png";
 import react from "../../assets/react.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import convertToBengaliNumber from "../../utils/convertToBengaliNumber ";
 // eslint-disable-next-line react/prop-types
 const Packages = ({ packageProps }) => {
   const [packageName, setPackageName] = useState("package__0");
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  // const scrollToSection = (id) => {
+  //   const element = document.getElementById(id);
+  //   if (element) {
+  //     element.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // };
   const packages = [
     {
       name: "সুপার ফাস্ট ই-কমার্স ওয়েবসাইট(Single Vendor)",
@@ -25,11 +25,27 @@ const Packages = ({ packageProps }) => {
         "অর্ডার ম্যানেজমেন্ট",
         "ইনভয়েস তৈরী",
         "আরো অনেক কিছু...",
+        "প্রোডাক্ট লিষ্টিং",
+        "অর্ডার ম্যানেজমেন্ট",
+        "ইনভয়েস তৈরী",
+        "আরো অনেক কিছু...",
+        "প্রোডাক্ট লিষ্টিং",
+        "অর্ডার ম্যানেজমেন্ট",
+        "ইনভয়েস তৈরী",
+        "আরো অনেক কিছু...",
+        "প্রোডাক্ট লিষ্টিং",
+        "অর্ডার ম্যানেজমেন্ট",
+        "ইনভয়েস তৈরী",
+        "আরো অনেক কিছু...",
       ],
       technology: [
         {
-          name: "Laravel MVC",
+          name: "Laravel",
           icon: laravel,
+        },
+        {
+          name: "VueJS",
+          icon: vue,
         },
       ],
       common: {
@@ -96,6 +112,18 @@ const Packages = ({ packageProps }) => {
     {
       name: "সুপার ফাস্ট ই-কমার্স ওয়েবসাইট(Multi Vendor)",
       features: [
+       "প্রোডাক্ট লিষ্টিং",
+        "অর্ডার ম্যানেজমেন্ট",
+        "ইনভয়েস তৈরী",
+        "আরো অনেক কিছু...",
+        "প্রোডাক্ট লিষ্টিং",
+        "অর্ডার ম্যানেজমেন্ট",
+        "ইনভয়েস তৈরী",
+        "আরো অনেক কিছু...",
+        "প্রোডাক্ট লিষ্টিং",
+        "অর্ডার ম্যানেজমেন্ট",
+        "ইনভয়েস তৈরী",
+        "আরো অনেক কিছু...",
         "প্রোডাক্ট লিষ্টিং",
         "অর্ডার ম্যানেজমেন্ট",
         "ইনভয়েস তৈরী",
@@ -179,6 +207,18 @@ const Packages = ({ packageProps }) => {
         "অর্ডার ম্যানেজমেন্ট",
         "ইনভয়েস তৈরী",
         "আরো অনেক কিছু...",
+        "প্রোডাক্ট লিষ্টিং",
+        "অর্ডার ম্যানেজমেন্ট",
+        "ইনভয়েস তৈরী",
+        "আরো অনেক কিছু...",
+        "প্রোডাক্ট লিষ্টিং",
+        "অর্ডার ম্যানেজমেন্ট",
+        "ইনভয়েস তৈরী",
+        "আরো অনেক কিছু...",
+        "প্রোডাক্ট লিষ্টিং",
+        "অর্ডার ম্যানেজমেন্ট",
+        "ইনভয়েস তৈরী",
+        "আরো অনেক কিছু...",
       ],
       technology: [
         {
@@ -252,6 +292,33 @@ const Packages = ({ packageProps }) => {
       ],
     },
   ];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sectionPositions = packages.map((_, index) => {
+        const element = document.getElementById(`package__${index}`);
+        if (element) {
+          return element.getBoundingClientRect().top;
+        }
+        return 0;
+      });
+
+      const activeIndex = sectionPositions.findIndex((pos) => pos >= 0 && pos <= window.innerHeight / 2);
+
+      if (activeIndex !== -1) {
+        setPackageName(`package__${activeIndex}`);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  const scrollToSection = (id) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <div id="package__section" className="ambition__cloud__package__container">
       <div className="ambition__cloud__package__content">
@@ -260,7 +327,7 @@ const Packages = ({ packageProps }) => {
           <button
             onClick={() => {
               scrollToSection("package__0");
-              setPackageName("package__0");
+              // setPackageName("package__0");
             }}
             className={`${packageName === "package__0" && "active"}`}
           >
@@ -269,7 +336,7 @@ const Packages = ({ packageProps }) => {
           <button
             onClick={() => {
               scrollToSection("package__1");
-              setPackageName("package__1");
+              // setPackageName("package__1");
             }}
             className={`${packageName === "package__1" && "active"}`}
           >
@@ -278,7 +345,7 @@ const Packages = ({ packageProps }) => {
           <button
             onClick={() => {
               scrollToSection("package__2");
-              setPackageName("package__2");
+              // setPackageName("package__2");
             }}
             className={`${packageName === "package__2" && "active"}`}
           >

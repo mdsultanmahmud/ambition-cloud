@@ -1,5 +1,5 @@
 .ambition__cloud__banner__container {
-  margin-top: 90px !important;
+  margin-top: 40px !important;
 }
 .ambition__cloud__banner__content {
   height: 150px;
@@ -9,11 +9,22 @@
 .ambition__cloud__banner__content p {
   width: 50%;
   text-align: center;
-  font-size: 16px;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 992px) {
+  .ambition__cloud__banner__content p {
+    width: 80%;
+  }
+  
 }
 
 @media screen and (max-width: 767px) {
   .ambition__cloud__banner__content {
     height: 180px;
   }
+  .ambition__cloud__banner__content p {
+    font-size: 16px;
+  }
+  
 }
