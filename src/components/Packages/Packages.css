@@ -34,7 +34,8 @@
 
 .ambition__cloud__package__name__section {
   position: relative;
-  margin: 20px 0px;
+  margin-bottom: 20px;
+  margin-left: 10px;
 }
 .ambition__cloud__package__name__section h2 {
   font-size: 20px;
@@ -68,13 +69,13 @@
 }
 @media screen and (max-width: 767px) {
   .ambition__cloud__package__toggle__btn {
-    gap: 5px;
+    gap: 15px;
   }
   .ambition__cloud__package__name__section h2 {
     font-size: 18px;
   }
   .ambition__cloud__package__toggle__btn button {
-    padding: 5px 10px;
+    padding: 5px 20px;
     border-radius: 30px;
     font-size: 15px;
   }

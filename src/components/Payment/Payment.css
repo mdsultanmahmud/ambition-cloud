@@ -157,7 +157,7 @@
   background-color: white;
   outline: none;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 15px;
   border: 1px solid #f20791;
   color: #f20791;
 }
@@ -195,6 +195,9 @@
   }
   .payment__method__item {
     flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-around;
+    row-gap: 20px;
   }
   .input__form label,
   .input__form__checkbox label {

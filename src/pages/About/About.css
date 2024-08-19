@@ -42,7 +42,7 @@
   font-size: 16px;
   font-family: sans-serif;
   opacity: 0.8;
-  margin-bottom: 20px !important;
+  margin-bottom: 40px !important;
 }
 
 .about__us__info__link {
@@ -64,8 +64,11 @@ p {
 @media screen and (max-width: 992px) {
   .about__us__content__container {
     grid-template-columns: repeat(1, 1fr);
-    row-gap: 25px;
+    row-gap: 45px;
     margin-top: 10px;
+  }
+  .about__us__info__img__container  img{
+    height: 320px;
   }
   .about__us__map__container iframe {
     width: 100%;
@@ -81,7 +84,8 @@ p {
     height: 270px;
   }
   .about__us__title {
-    font-size: 23px;
+    font-size: 25px;
+    margin-bottom: 60px !important;
   }
   .about__us__info__container {
     grid-template-columns: repeat(1, 1fr);

@@ -64,6 +64,10 @@
 .package__perfect__section {
   margin-top: 15px !important;
 }
+.package__perfect__section h3{
+  font-size: 22px;
+  opacity: 0.8;
+}
 .package__perfect__section p {
   margin-left: 10px;
   margin-bottom: 5px;
@@ -140,6 +144,9 @@
   }
   .package__info h4 {
     font-size: 16px;
+  }
+  .package__perfect__section h3{
+    font-size: 18px;
   }
   .package__info .package__features,
   .package__info .package__technologies {

@@ -4,13 +4,14 @@
 }
 .condition__heading{
     text-align: center;
-    font-size: 18px;
+    font-size: 22px;
     margin-bottom: 25px;
 }
 .ambition__cloud__condition__container h3{
     text-align: center;
     margin-bottom: 20px;
     font-size: 20px;
+    opacity: 0.7;
 }
 .condition__description{
     font-size: 16px;

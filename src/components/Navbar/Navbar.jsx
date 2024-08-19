@@ -2,7 +2,8 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import { FaBars } from "react-icons/fa";
 import { useState, useEffect } from "react";
-import { ImCross } from "react-icons/im";
+import { RxCross2 } from "react-icons/rx";
+
 import logo from "../../assets/logo.png";
 const Navbar = () => {
   const location = useLocation();
@@ -99,7 +100,7 @@ const Navbar = () => {
             {!showNav ? (
               <FaBars size={22} onClick={() => setShowNav(true)} />
             ) : (
-              <ImCross size={22} onClick={() => setShowNav(false)} />
+              <RxCross2  size={22} onClick={() => setShowNav(false)} />
             )}
           </div>
         </div>
