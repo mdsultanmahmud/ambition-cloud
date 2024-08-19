@@ -293,6 +293,7 @@ const Packages = ({ packageProps }) => {
     },
   ];
 
+// change the active button when scroll 
   useEffect(() => {
     const handleScroll = () => {
       const sectionPositions = packages.map((_, index) => {
@@ -318,8 +319,9 @@ const Packages = ({ packageProps }) => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  // section scrolling spacing issue for sticy the button container 
   const scrollToSection = (id) => {
-    // document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
     const element = document.getElementById(id);
     if (element) {
       const headerOffset = 200;

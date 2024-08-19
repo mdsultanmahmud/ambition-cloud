@@ -17,7 +17,6 @@ const Navbar = () => {
       setSection(location.state.scrollTo);
     }
   }, [location]);
-
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
@@ -100,7 +99,7 @@ const Navbar = () => {
             {!showNav ? (
               <FaBars size={22} onClick={() => setShowNav(true)} />
             ) : (
-              <RxCross2  size={22} onClick={() => setShowNav(false)} />
+              <RxCross2 size={22} onClick={() => setShowNav(false)} />
             )}
           </div>
         </div>
