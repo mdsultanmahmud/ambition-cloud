@@ -3,7 +3,7 @@ import "./Navbar.css";
 import { FaBars } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import { ImCross } from "react-icons/im";
-import logo from '../../assets/logo.png'
+import logo from "../../assets/logo.png";
 const Navbar = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -20,12 +20,20 @@ const Navbar = () => {
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      const headerOffset = 120;
+      const elementPosition =
+        element.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
     }
   };
 
   const handleSectionClick = (sectionId) => {
-    setShowNav(false)
+    setShowNav(false);
     if (location.pathname === "/") {
       scrollToSection(sectionId);
       setSection(sectionId);
@@ -59,10 +67,16 @@ const Navbar = () => {
       >
         শর্তাবলী
       </li>
-      <li onClick={() => setShowNav(false)} className={`${location.pathname === "/about" && "active"}`}>
+      <li
+        onClick={() => setShowNav(false)}
+        className={`${location.pathname === "/about" && "active"}`}
+      >
         <Link to="/about">আমাদের সম্পর্কে</Link>
       </li>
-      <li onClick={() => setShowNav(false)} className={`${location.pathname === "/contact" && "active"}`}>
+      <li
+        onClick={() => setShowNav(false)}
+        className={`${location.pathname === "/contact" && "active"}`}
+      >
         <Link to="/contact">যোগাযোগ</Link>
       </li>
     </>

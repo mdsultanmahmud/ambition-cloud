@@ -112,7 +112,7 @@ const Packages = ({ packageProps }) => {
     {
       name: "সুপার ফাস্ট ই-কমার্স ওয়েবসাইট(Multi Vendor)",
       features: [
-       "প্রোডাক্ট লিষ্টিং",
+        "প্রোডাক্ট লিষ্টিং",
         "অর্ডার ম্যানেজমেন্ট",
         "ইনভয়েস তৈরী",
         "আরো অনেক কিছু...",
@@ -303,7 +303,9 @@ const Packages = ({ packageProps }) => {
         return 0;
       });
 
-      const activeIndex = sectionPositions.findIndex((pos) => pos >= 0 && pos <= window.innerHeight / 2);
+      const activeIndex = sectionPositions.findIndex(
+        (pos) => pos >= 0 && pos <= window.innerHeight / 2
+      );
 
       if (activeIndex !== -1) {
         setPackageName(`package__${activeIndex}`);
@@ -317,7 +319,18 @@ const Packages = ({ packageProps }) => {
     };
   }, []);
   const scrollToSection = (id) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    // document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    const element = document.getElementById(id);
+    if (element) {
+      const headerOffset = 200;
+      const elementPosition =
+        element.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - headerOffset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
   };
   return (
     <div id="package__section" className="ambition__cloud__package__container">
