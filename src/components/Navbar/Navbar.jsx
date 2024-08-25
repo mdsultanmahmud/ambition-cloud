@@ -4,7 +4,8 @@ import { FaBars } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import { RxCross2 } from "react-icons/rx";
 
-import logo from "../../assets/logo.png";
+// import logo from "../../assets/logo.png";
+import logo from "../../assets/logo.jpeg";
 const Navbar = () => {
   const location = useLocation();
   const navigate = useNavigate();

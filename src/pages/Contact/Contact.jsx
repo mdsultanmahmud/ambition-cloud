@@ -25,10 +25,13 @@ const Contact = () => {
     toast.success("Your message submitted!");
     console.log("form data is:", formData);
   };
+  const handleClickLink = (link) => {
+    window.open(link, "_blank");
+  };
 
-  useEffect(() =>{
-    window.scrollTo(0,0)
-  },[])
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="ambition__cloud__contact__us__container">
@@ -79,7 +82,10 @@ const Contact = () => {
             <div className="contact__us__icons__container">
               <FaFacebook className="icon" />
               <FaSkype className="icon" />
-              <FaTelegramPlane className="icon" />
+              <FaTelegramPlane
+                onClick={() => handleClickLink("https://t.me/ambition_cloud")}
+                className="icon"
+              />
               <FaLinkedin className="icon" />
             </div>
           </div>

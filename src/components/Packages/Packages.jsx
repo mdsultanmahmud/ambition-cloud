@@ -19,24 +19,23 @@ const Packages = ({ packageProps }) => {
   // };
   const packages = [
     {
-      name: "সুপার ফাস্ট ই-কমার্স ওয়েবসাইট(Single Vendor)",
+      name: "সুপার ফাস্ট ই-কমার্স ওয়েবসাইট (সিঙ্গেল ভেন্ডর)",
       features: [
-        "প্রোডাক্ট লিষ্টিং",
-        "অর্ডার ম্যানেজমেন্ট",
-        "ইনভয়েস তৈরী",
-        "আরো অনেক কিছু...",
-        "প্রোডাক্ট লিষ্টিং",
-        "অর্ডার ম্যানেজমেন্ট",
-        "ইনভয়েস তৈরী",
-        "আরো অনেক কিছু...",
-        "প্রোডাক্ট লিষ্টিং",
-        "অর্ডার ম্যানেজমেন্ট",
-        "ইনভয়েস তৈরী",
-        "আরো অনেক কিছু...",
-        "প্রোডাক্ট লিষ্টিং",
-        "অর্ডার ম্যানেজমেন্ট",
-        "ইনভয়েস তৈরী",
-        "আরো অনেক কিছু...",
+        "দৃষ্টিনন্দন ইউজার ইন্টারফেস",
+        "সুন্দর অ্যাডমিন প্যানেল",
+        "পণ্য (বিবরণ, এসইও, ট্যাগ, অপশন, ইমেজ গ্যালারি, ভিডিও)",
+        "পণ্যের বিভিন্নতা ও মূল্য",
+        "পণ্য উইশলিস্ট ও রিভিউস",
+        "স্মার্ট কার্ট সিস্টেম",
+        "সহজ চেকআউট",
+        "ই-কমার্স POS",
+        "কুপন ও ভাউচার",
+        "স্টক ও ইনভেন্টরি ম্যানেজমেন্ট",
+        "ইনভয়েচ, অর্ডার ম্যানেজমেন্ট ও ট্র্যাকিং",
+        "পুশ নোটিফিকেশন",
+        "একাধিক পেমেন্ট গেটওয়ে",
+        "একাধিক ভাষা ও বহু মুদ্রা সমর্থন",
+        "এবং আরো অনেক কিছু",
       ],
       technology: [
         {
@@ -62,7 +61,7 @@ const Packages = ({ packageProps }) => {
         state1: "নিজের পছন্দমত কাস্টমাইজ করা যাবে",
         delivery: "৩ থেকে ৫ দিন",
         support: "৭ দিন",
-        type: "কাস্টমাইজ",
+        type: "কর্পোরেট",
         name: "package_1",
         type1: "customize",
       },
@@ -75,7 +74,7 @@ const Packages = ({ packageProps }) => {
       websites: [
         {
           category: "Fashion",
-          link: "https://demo1.example.com.bd",
+          link: "https://example.com.bd",
         },
         {
           category: "Electronics",
@@ -110,7 +109,7 @@ const Packages = ({ packageProps }) => {
       ],
     },
     {
-      name: "সুপার ফাস্ট ই-কমার্স ওয়েবসাইট(Multi Vendor)",
+      name: "সুপার ফাস্ট ই-কমার্স ওয়েবসাইট (মাল্টি ভেন্ডর)",
       features: [
         "প্রোডাক্ট লিষ্টিং",
         "অর্ডার ম্যানেজমেন্ট",
@@ -131,7 +130,7 @@ const Packages = ({ packageProps }) => {
       ],
       technology: [
         {
-          name: "Laravel MVC",
+          name: "Laravel",
           icon: laravel,
         },
         {
@@ -153,7 +152,7 @@ const Packages = ({ packageProps }) => {
         state1: "নিজের পছন্দমত কাস্টমাইজ করা যাবে",
         delivery: "৭ থেকে ১৫ দিন",
         support: "১৫ দিন",
-        type: "কাস্টমাইজ",
+        type: "কর্পোরেট",
         name: "package_2",
         type1: "customize",
       },
@@ -222,7 +221,7 @@ const Packages = ({ packageProps }) => {
       ],
       technology: [
         {
-          name: "Laravel MVC",
+          name: "Laravel",
           icon: laravel,
         },
         {
@@ -244,7 +243,7 @@ const Packages = ({ packageProps }) => {
         state1: "নিজের পছন্দমত কাস্টমাইজ করা যাবে",
         delivery: "১ মাস",
         support: "১ মাস",
-        type: "কাস্টমাইজ",
+        type: "কর্পোরেট",
         name: "package_3",
         type1: "customize",
       },

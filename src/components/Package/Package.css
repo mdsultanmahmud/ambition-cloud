@@ -32,7 +32,7 @@
 .package__info .package__features,
 .package__info .package__technologies {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 5px;
 }
 .package__info .package__technologies div {
@@ -94,8 +94,10 @@
   display: flex;
   gap: 15px;
   margin-bottom: 10px;
+  align-items: center;
+  /* background-color: green; */
 }
-.cat__item__btn {
+.cat__item__btn p{
   width: 90px;
   border: 1px solid #f20791;
   padding: 3px 10px;
@@ -104,13 +106,31 @@
   border-radius: 5px;
   font-weight: 600;
 }
-.cat__item {
-  font-size: 15px;
+.cat__section__link__icon{
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.admin__items__pass__gmail{
+  display: flex;
+  flex-direction: column;
+}
+.admin__items__pass__gmail p{
+  margin: 0px !important;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  gap: 5px;
+  color: #555;
+}
+.admin__items__pass__gmail .copy{
+  cursor: pointer;
 }
 .cat__link {
   text-decoration: none;
   color: black;
   cursor: pointer;
+  font-size: 15px;
 }
 .cat__link:hover {
   color: #f20791;
