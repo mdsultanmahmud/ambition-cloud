@@ -19,8 +19,8 @@ const About = () => {
           <div className="about__us__info__text__container">
             <h3>হেড অফিস</h3>
             <p className="info__address">
-              নিউ ৭ টাওয়ার, <br /> লাভ রোড, তেজগাঁও শিল্প এলাকা <br /> ঢাকা -
-              ১২০৮, বাংলাদেশ
+              ৫ম তলা, বাড়ি ১, <br /> রোড ১৩, সেক্টর ১৩, <br /> গরীব ই নেওয়াজ
+              অ্যাভিনিউ, <br /> উত্তরা ঢাকা-১২৩০, বাংলাদেশ
             </p>
             <p className="about__us__info__link">
               <MdCall size={24} />

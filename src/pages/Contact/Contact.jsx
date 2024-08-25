@@ -3,7 +3,8 @@ import { MdCall, MdOutgoingMail } from "react-icons/md";
 import { FaLocationDot, FaSkype } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa6";
 import { FaTelegramPlane } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa6";
+import { ImWhatsapp } from "react-icons/im";
+
 import toast from "react-hot-toast";
 import { useEffect, useState } from "react";
 
@@ -60,8 +61,8 @@ const Contact = () => {
                 <span>ঠিকানা:</span>{" "}
               </h4>
               <p className="info__address">
-                নিউ ৭ টাওয়ার, লাভ রোড, তেজগাঁও শিল্প এলাকা, ঢাকা - ১২০৮,
-                বাংলাদেশ
+                ৫ম তলা, বাড়ি ১, রোড ১৩, সেক্টর ১৩, গরীব ই নেওয়াজ অ্যাভিনিউ,
+                উত্তরা ঢাকা-১২৩০, বাংলাদেশ
               </p>
             </div>
             <div className="contact__us__link__container">
@@ -80,13 +81,30 @@ const Contact = () => {
               <p>support@example.com</p>
             </div>
             <div className="contact__us__icons__container">
-              <FaFacebook className="icon" />
-              <FaSkype className="icon" />
+              <FaFacebook
+                onClick={() =>
+                  handleClickLink("https://www.facebook.com/AmbitionCloud/")
+                }
+                className="icon"
+              />
+              <FaSkype
+                onClick={() =>
+                  handleClickLink("https://join.skype.com/invite/qQ7UOkhy6gLJ")
+                }
+                className="icon"
+              />
               <FaTelegramPlane
                 onClick={() => handleClickLink("https://t.me/ambition_cloud")}
                 className="icon"
               />
-              <FaLinkedin className="icon" />
+              <ImWhatsapp
+                onClick={() =>
+                  handleClickLink(
+                    "https://api.whatsapp.com/send?phone=8801778807299"
+                  )
+                }
+                className="icon"
+              />
             </div>
           </div>
           <div className="contact__us__form__container">
