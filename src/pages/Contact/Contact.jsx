@@ -69,16 +69,16 @@ const Contact = () => {
               <h4 className="contact__us__link">
                 <MdCall size={24} /> <span>মোবাইল নাম্বার:</span>{" "}
               </h4>
-              <p>০১৭২৩৩৭..</p>
-              <p>০১৭২৩৩৭..</p>
+              <p>
+                <a href="tel:+8801722303555">+8801722303555</a>
+              </p>
             </div>
             <div className="contact__us__link__container">
               <h4 className="contact__us__link">
                 <MdOutgoingMail size={24} />
                 <span>ইমেইল:</span>{" "}
               </h4>
-              <p>info@example.com</p>
-              <p>support@example.com</p>
+              <p>info@ambition-cloud.com</p>
             </div>
             <div className="contact__us__icons__container">
               <FaFacebook
@@ -98,11 +98,7 @@ const Contact = () => {
                 className="icon"
               />
               <ImWhatsapp
-                onClick={() =>
-                  handleClickLink(
-                    "https://api.whatsapp.com/send?phone=8801778807299"
-                  )
-                }
+                onClick={() => handleClickLink("https://wa.me/8801778807299")}
                 className="icon"
               />
             </div>
