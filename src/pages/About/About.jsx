@@ -24,12 +24,12 @@ const About = () => {
             </p>
             <p className="about__us__info__link">
               <MdCall size={24} />
-              <span>০১৫৮৪৭...</span>
+              <span><a href="tel:+8801722303555">+8801722303555</a></span>
             </p>
             <p className="about__us__info__link">
               <MdOutgoingMail size={24} />
 
-              <span>support@ambition-cloud.com</span>
+              <span>info@ambition-cloud.com</span>
             </p>
             <p className="about__us__info__link">
               <FaSkype size={24} />

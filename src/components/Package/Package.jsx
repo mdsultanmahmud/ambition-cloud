@@ -48,7 +48,7 @@ const Package = ({ pkg, packageProps }) => {
                   <p>{web.category}</p>
                 </div>
                 <div className="cat__section__link__icon">
-                  <a href={web.link} className="cat__link">
+                  <a href={web.link} target="_blank"  className="cat__link">
                     {web.link}
                   </a>
                   <HiExternalLink
@@ -67,7 +67,7 @@ const Package = ({ pkg, packageProps }) => {
                 <p>Link</p>
               </div>
               <div className="cat__section__link__icon">
-                <a href={admin_panel_link} className="cat__link">
+                <a href={admin_panel_link} target="_blank"  className="cat__link">
                   {admin_panel_link}
                 </a>
                 <HiExternalLink

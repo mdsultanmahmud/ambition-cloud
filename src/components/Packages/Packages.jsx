@@ -74,7 +74,7 @@ const Packages = ({ packageProps }) => {
       websites: [
         {
           category: "Fashion",
-          link: "https://example.com.bd",
+          link: "https://demo1.aladinexpress.com.bd",
         },
         {
           category: "Electronics",
@@ -292,7 +292,7 @@ const Packages = ({ packageProps }) => {
     },
   ];
 
-// change the active button when scroll 
+  // change the active button when scroll
   useEffect(() => {
     const handleScroll = () => {
       const sectionPositions = packages.map((_, index) => {
@@ -319,7 +319,7 @@ const Packages = ({ packageProps }) => {
     };
   }, []);
 
-  // section scrolling spacing issue for sticy the button container 
+  // section scrolling spacing issue for sticy the button container
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {

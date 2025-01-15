@@ -4,6 +4,8 @@ import { useState } from "react";
 import "./ConnectWhatsapp.css";
 import { ImWhatsapp } from "react-icons/im";
 import person from "../../assets/wt__lg.png";
+import whatsApp from '../../assets/whatsapp.jpg'
+import cross from '../../assets/cross.png'
 function contactMe() {
   const buildUrl = (message) => {
     const system = isMobile().phone ? "api" : "web";
@@ -37,7 +39,7 @@ const ConnectWhatsapp = () => {
             <div className="img-wrapper">
               <img className="person-image" src={person} />
             </div>
-            Ambition Cloud
+            <h3>Ambition Cloud</h3>
           </div>
         </div>
         <div className="center">
@@ -65,11 +67,12 @@ const ConnectWhatsapp = () => {
       <button className={mnButnClassnames} onClick={toggle}>
         <img
           className={icon1Classnames}
-          src="https://firebasestorage.googleapis.com/v0/b/codepen-13ec9.appspot.com/o/WhatsApp%20Logo.svg?alt=media&token=4a8f0a19-78ce-4456-99f1-a325ad398fb0"
+          src={whatsApp}
         />
         <img
           className={icon2Classnames}
-          src="https://firebasestorage.googleapis.com/v0/b/codepen-13ec9.appspot.com/o/close-white.svg?alt=media&token=c036208a-7c9b-49c2-8ea5-a21a0bae2d13"
+          src={cross}
+          // src="https://firebasestorage.googleapis.com/v0/b/codepen-13ec9.appspot.com/o/close-white.svg?alt=media&token=c036208a-7c9b-49c2-8ea5-a21a0bae2d13"
         />
       </button>
     </>
