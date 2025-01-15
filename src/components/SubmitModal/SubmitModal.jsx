@@ -7,7 +7,7 @@ import {
 } from "semantic-ui-react";
 
 // eslint-disable-next-line react/prop-types
-function SubmitModal({ open, setOpen }) {
+function SubmitModal({ open, setOpen, orderId }) {
   return (
     <Modal
       onClose={() => setOpen(false)}
@@ -33,7 +33,7 @@ function SubmitModal({ open, setOpen }) {
               margin: "30px 0px",
             }}
           >
-            ২৩৬৫১
+           {orderId}
           </h3>
           <p
             style={{

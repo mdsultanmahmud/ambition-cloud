@@ -9,12 +9,14 @@ import { TbCurrencyTaka } from "react-icons/tb";
 import SubmitModal from "../SubmitModal/SubmitModal";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
+import axios from "axios";
 
 // eslint-disable-next-line react/prop-types
 const Payment = ({ props }) => {
   const [open, setOpen] = useState(false);
   const [price, setPrice] = useState("৩০,০০০");
-  const [isAgree, setIsAgree] = useState(false);
+  const [isAgree, setIsAgree] = useState(true);
+  const [orderId, setOrderId] = useState("২৩৬৫১");
   // eslint-disable-next-line react/prop-types
   const { selectedPackage, setSelectedPackage, packageType, setPackageType } =
     props;
@@ -25,8 +27,9 @@ const Payment = ({ props }) => {
     phone: "",
     message: "",
     address: "",
-    isRobot: false,
-    isAgree: false,
+    price: price,
+    package: selectedPackage,
+    packageType: packageType,
   });
   const handleInput = (e) => {
     setFormData({
@@ -34,11 +37,29 @@ const Payment = ({ props }) => {
       [e.target.name]: e.target.value,
     });
   };
-  const handleOrder = (e) => {
+  const handleOrder = async (e) => {
     e.preventDefault();
-    toast.success("Your order confirmed!");
-    setOpen(true);
-    console.log(formData);
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/api/v1/orders/create",
+        formData,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      if (response.data.order) {
+        toast.success("Your order confirmed!");
+        setOrderId(response.data.order.orderId);
+        setOpen(true);
+      } else {
+        toast.error("Your is not confirmed!");
+      }
+    } catch (error) {
+      toast.error("Your is not confirmed!");
+      console.log(error);
+    }
   };
   const methods = [
     {
@@ -93,7 +114,7 @@ const Payment = ({ props }) => {
         <div className="payment__method__container">
           <h4 className="payment__method__title">পেমেন্ট এর নিয়মঃ</h4>
           <p className="payment__method__desc">
-          অর্ডার কনফার্ম এর সময় ৫০%, সাইট ডেলিভারীর সময় বাকি ৫০% ।
+            অর্ডার কনফার্ম এর সময় ৫০%, সাইট ডেলিভারীর সময় বাকি ৫০% ।
           </p>
           <div className="payment__method">
             <p className="payment__method__title">পেমেন্ট মেথডঃ</p>
@@ -111,8 +132,9 @@ const Payment = ({ props }) => {
         <div className="payment__method__form__container">
           <p className="payment__method__form__title">অর্ডার করুন</p>
           <p className="payment__method__form__desc">
-          SAAS - Software As A Service হিসাবে একটি মাত্র ওয়েবসাইটে ব্যবহার করতে পারবেন ।
-          তবে সোর্স কোড সহ কিনতে চাইলে নির্ধারিত মুল্যের ৫ গূণ অর্থ পরিশোধ করতে হবে ।
+            SAAS - Software As A Service হিসাবে একটি মাত্র ওয়েবসাইটে ব্যবহার
+            করতে পারবেন । তবে সোর্স কোড সহ কিনতে চাইলে নির্ধারিত মুল্যের ৫ গূণ
+            অর্থ পরিশোধ করতে হবে ।
           </p>
           <div className="form__choose__section">
             <span>যে প্যাকেজটি নিতে ইচ্ছুক</span>
@@ -169,7 +191,7 @@ const Payment = ({ props }) => {
             </div>
 
             <div className="input__form">
-              <label htmlFor="email">ইমেইলঃ  </label>
+              <label htmlFor="email">ইমেইলঃ </label>
               <input
                 onChange={(e) => handleInput(e)}
                 required
@@ -211,7 +233,7 @@ const Payment = ({ props }) => {
             </div>
             <div className="input__form__checkbox">
               <input
-                onChange={(e) => handleInput(e)}
+                // onChange={(e) => handleInput(e)}
                 type="checkbox"
                 id="isRobot"
                 name="isRobot"
@@ -220,25 +242,26 @@ const Payment = ({ props }) => {
             </div>
             <div className="input__form__checkbox">
               <input
-                onChange={(e) => handleInput(e)}
+                // onChange={(e) => handleInput(e)}
                 type="checkbox"
                 id="isAgree"
                 name="isAgree"
                 onClick={() => setIsAgree(!isAgree)}
               />
               <label htmlFor="isAgree">
-              আমি উপরের শর্তে রাজি আছি এবং বিস্তারিত আলোচনা সাপেক্ষে ওর্ডার করছি ।
+                আমি উপরের শর্তে রাজি আছি এবং বিস্তারিত আলোচনা সাপেক্ষে ওর্ডার
+                করছি ।
               </label>
             </div>
 
-            <button type="submit" disabled={!isAgree}>
-            অর্ডার করুন
+            <button type="submit" disabled={isAgree}>
+              অর্ডার করুন
             </button>
           </form>
         </div>
       </div>
 
-      <SubmitModal open={open} setOpen={setOpen} />
+      <SubmitModal open={open} setOpen={setOpen} orderId={orderId} />
     </>
   );
 };
