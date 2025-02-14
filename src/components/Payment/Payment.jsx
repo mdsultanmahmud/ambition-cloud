@@ -10,6 +10,7 @@ import SubmitModal from "../SubmitModal/SubmitModal";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import axios from "axios";
+import { url } from "../../utils/env";
 
 // eslint-disable-next-line react/prop-types
 const Payment = ({ props }) => {
@@ -17,6 +18,7 @@ const Payment = ({ props }) => {
   const [price, setPrice] = useState("৩০,০০০");
   const [isAgree, setIsAgree] = useState(true);
   const [orderId, setOrderId] = useState("২৩৬৫১");
+
   // eslint-disable-next-line react/prop-types
   const { selectedPackage, setSelectedPackage, packageType, setPackageType } =
     props;
@@ -31,6 +33,15 @@ const Payment = ({ props }) => {
     package: selectedPackage,
     packageType: packageType,
   });
+  useEffect(() => {
+    setFormData((prev) => ({
+      ...prev,
+      price: price,
+      package: selectedPackage,
+      packageType: packageType,
+    }));
+  }, [selectedPackage, packageType, price]);
+
   const handleInput = (e) => {
     setFormData({
       ...formData,
@@ -41,7 +52,7 @@ const Payment = ({ props }) => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/v1/orders/create",
+        `${url.BASE_URL}/orders/create`,
         formData,
         {
           headers: {
